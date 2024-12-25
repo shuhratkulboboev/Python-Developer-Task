@@ -20,18 +20,18 @@ cd path/to/directory
 
 ### Install Dependencies: 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt # Installs the dependencies listed in requirements.txt, including shapely.
  ```   
 
 ### Run Script: 
-Run the main scirpt:
+Run the main script:
 ```bash
 python main.py
  ```
 ## Logging
 All actions and significant events (e.g., adding a new key, copying directories, processing files) are logged in the app.log file, including timestamps.
 ```bash
-tail -f app.log
+tail -f app.log # Outputs the log contents as they are written
 ```
 
 ## Features
@@ -46,7 +46,7 @@ tail -f app.log
 └── requirements.txt      # List of dependencies for the project
  ```
 ## Usage Examples
-It is shown as an exmaple of usage these abovementioned functions. Input varialbles can be changed into any.
+Here is an example of how to use the above-mentioned functions. Input varialbles can be changed into any.
 ```bash
 def main():
     
@@ -70,8 +70,8 @@ def main():
 
 
     # 4. File Processing
-    source_dir = 'D:/AI_based_control/project'
-    target_dir = 'D:/AI_based_control/Thesis'
+    source_dir = 'path_to_your_source_directory'
+    target_dir = 'path_to_your_target_directory'
     FileProcessor.copy_directory(source_dir, target_dir)  
     print(FileProcessor.process_files(target_dir, ['.txt', '.log']))  # Output: List of files and their line count
 if __name__ == "__main__":
