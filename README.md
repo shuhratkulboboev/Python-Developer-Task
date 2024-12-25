@@ -14,5 +14,5 @@ This Python project implements the following key features:
 ### Clone the Repository:
 To get started with the project, first clone the repository:
 ```bash
-git clone https://github.com/<username>/python-data-storage-algorithms.git
-cd python-data-storage-algorithms
+git clone https://github.com/shuhratkulboboev/Python-Developer-Task.git
+cd path/to/directory
