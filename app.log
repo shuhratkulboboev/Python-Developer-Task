@@ -3,3 +3,20 @@
 2024-12-25 11:45:14 ACTION : Successfuly extracted key:name with corresponding value:Shukhrat
 2024-12-25 11:45:14 ACTION : Deleted key:name
 2024-12-25 11:45:14 ACTION : tried to extract non-existing key:{key}
+2024-12-25 12:32:28 ACTION : Copied directory from D:/AI_based_control/project to D:/AI_based_control/Thesis
+2024-12-25 12:32:28 ACTION : Processed file: app.log, Lines: 5
+2024-12-25 12:32:29 ACTION : Processed file: requirements.txt, Lines: 2
+2024-12-25 12:32:29 ACTION : Processed file: requirements.txt, Lines: 11
+2024-12-25 12:32:29 ACTION : Processed file: cifar10-global-group_sl-resnet56.txt, Lines: 450
+2024-12-25 12:32:29 ACTION : Processed file: cifar10-global-group_sl-resnet56.txt, Lines: 449
+2024-12-25 12:32:29 ACTION : Processed file: cifar10-global-growing_reg-resnet56.txt, Lines: 930
+2024-12-25 12:32:29 ACTION : Processed file: cifar10-global-l1-resnet56.txt, Lines: 593
+2024-12-25 12:32:29 ACTION : Processed file: cifar10-global-slim-resnet56.txt, Lines: 928
+2024-12-25 12:32:29 ACTION : Processed file: cifar100-global-group_sl-vgg19.txt, Lines: 300
+2024-12-25 12:32:29 ACTION : Processed file: batches.meta.txt, Lines: 11
+2024-12-25 12:32:29 ACTION : Processed file: requirements.txt, Lines: 6
+2024-12-25 12:32:29 ACTION : Processed file: requirements_dev.txt, Lines: 3
+2024-12-25 12:32:29 ACTION : Processed file: dependency_links.txt, Lines: 1
+2024-12-25 12:32:29 ACTION : Processed file: requires.txt, Lines: 1
+2024-12-25 12:32:29 ACTION : Processed file: SOURCES.txt, Lines: 204
+2024-12-25 12:32:29 ACTION : Processed file: top_level.txt, Lines: 1
