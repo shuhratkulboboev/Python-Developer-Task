@@ -16,8 +16,9 @@ To get started with the project, first clone the repository:
 ```bash
 git clone https://github.com/shuhratkulboboev/Python-Developer-Task.git
 cd path/to/directory
+ ```
 
-**Install Dependencies**: 
+### Install Dependencies: 
     - Ensure that Python 3.8 or higher is installed (you can provide a simple `python --version` check).
     - Install the required package `shapely` using `pip install shapely`.
 
