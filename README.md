@@ -44,12 +44,32 @@ tail -f app.log
 └── README.md      # Instructions for running the project
  ```
 ## Usage Examples
-### DataStorage Example:
 ```bash
-# 1. Data Storage
+def main():
+    
+    # 1. Data Storage
     storage = DataStorage()
     storage.add("name", "Shukhrat")
     print(storage.get("name"))  
     storage.delete("name")
     print(storage.get("name"))
+
+    # 2. Algorithm Implementation
+    text = "Hello world! Hello everyone. This is the best company. Company, world,company, hello,world,world"
+    print(find_top_k_frequent_words(text, 2))
+
+    # 3. Polygon Collision Detection
+    polygon1 = [(0, 0), (4, 0), (4, 4), (0, 4)]
+    polygon2 = [(2, 2), (6, 2), (6, 6), (2, 6)]
+    polygon3 = [(5, 5), (7, 5), (7, 7), (5, 7)]
+    print(check_polygon_collision(polygon1,polygon2))
+    print(check_polygon_collision(polygon1,polygon3))
+
+    # 4. File Processing
+    source_dir = 'D:/AI_based_control/project'
+    target_dir = 'D:/AI_based_control/Thesis'
+    FileProcessor.copy_directory(source_dir, target_dir)  
+    print(FileProcessor.process_files(target_dir, ['.txt', '.log']))
+if __name__ == "__main__":
+    main()
  ```
