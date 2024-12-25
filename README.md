@@ -23,3 +23,8 @@ cd path/to/directory
     - Install the required package `shapely` using `pip install shapely`.
 
 This makes it clear for users how to set up the environment for your project. Replace `<username>` with your GitHub username in the clone URL.
+### Run Script: 
+Run the main scirpt:
+```bash
+python main.py
+ ```
