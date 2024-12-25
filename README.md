@@ -38,7 +38,7 @@ tail -f app.log
 
 ### Project Structure:
 ```bash
-/python-data-storage-algorithms
+/project_folder
 │
 ├── main.py              # Main script with all implemented features
 ├── app.log              # Log file for application actions
