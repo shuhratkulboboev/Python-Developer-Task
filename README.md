@@ -19,7 +19,7 @@ cd path/to/directory
  ```
 
 ### Install Dependencies: 
-    - Ensure that Python 3.8 or higher is installed (you can provide a simple `python --version` check).
+    - Ensure that Python 3.8 or higher is installed .
     - Install the required package `shapely` using `pip install shapely`.
 
 This makes it clear for users how to set up the environment for your project. Replace `<username>` with your GitHub username in the clone URL.
