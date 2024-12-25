@@ -49,27 +49,28 @@ def main():
     
     # 1. Data Storage
     storage = DataStorage()
-    storage.add("name", "Shukhrat")
-    print(storage.get("name"))  
+    storage.add("name", "Shukhrat") 
+    print(storage.get("name"))  # Output: Shukhrat 
     storage.delete("name")
-    print(storage.get("name"))
+    print(storage.get("name"))   # Output: Key has not been found
 
     # 2. Algorithm Implementation
     text = "Hello world! Hello everyone. This is the best company. Company, world,company, hello,world,world"
-    print(find_top_k_frequent_words(text, 2))
+    print(find_top_k_frequent_words(text, 2))  # Output: [('world', 4), ('hello', 3)]
 
     # 3. Polygon Collision Detection
     polygon1 = [(0, 0), (4, 0), (4, 4), (0, 4)]
     polygon2 = [(2, 2), (6, 2), (6, 6), (2, 6)]
     polygon3 = [(5, 5), (7, 5), (7, 7), (5, 7)]
-    print(check_polygon_collision(polygon1,polygon2))
-    print(check_polygon_collision(polygon1,polygon3))
+    print(check_polygon_collision(polygon1,polygon2))  # Output: True (Intersecting)
+    print(check_polygon_collision(polygon1,polygon3))   # Output: False (No collision)
+
 
     # 4. File Processing
     source_dir = 'D:/AI_based_control/project'
     target_dir = 'D:/AI_based_control/Thesis'
     FileProcessor.copy_directory(source_dir, target_dir)  
-    print(FileProcessor.process_files(target_dir, ['.txt', '.log']))
+    print(FileProcessor.process_files(target_dir, ['.txt', '.log']))  # Output: List of files and their line count
 if __name__ == "__main__":
     main()
  ```
