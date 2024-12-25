@@ -28,3 +28,10 @@ Run the main scirpt:
 ```bash
 python main.py
  ```
+
+## Features
+### Logging:
+All actions and significant events (e.g., adding a new key, copying directories, processing files) are logged in the app.log file, including timestamps.
+```bash
+tail -f app.log
+ ```
