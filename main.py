@@ -1,6 +1,8 @@
 # import needed libraries
+import os
 import re
 import logging
+import shutil
 from collections import Counter
 from typing import Tuple,List
 from shapely.geometry import Polygon
@@ -70,17 +72,52 @@ def check_polygon_collision(polygon1: List[Tuple[float, float]], polygon2: List[
     else: 
         return False
 #-----------------------------------------------------------------------------------------------------------------
+# File Processing
+
+class FileProcessor:
+    @staticmethod
+    def copy_directory(source_dir: str, target_dir: str) -> None:
+        """Copy all contents from the source directory to the target directory."""
+        try:
+            if not os.path.exists(target_dir):
+                os.makedirs(target_dir)
+                logging.info(f"Created target directory: {target_dir}")
+            
+            shutil.copytree(source_dir, target_dir, dirs_exist_ok=True)
+            logging.info(f"Copied directory from {source_dir} to {target_dir}")
+        
+        except Exception as e:
+            logging.error(f"Error copying directory: {e}")
+
+    @staticmethod
+    def process_files(directory: str, extensions: List[str]) -> List[Tuple[str, int]]:
+        """Process files in the directory with specific extensions and count lines."""
+        results = []
+        try:
+            for root, _, files in os.walk(directory):
+                for file in files:
+                    if any(file.endswith(ext) for ext in extensions):
+                        path = os.path.join(root, file)
+                        with open(path, 'r') as f:
+                            line_count = sum(1 for _ in f)
+                        results.append((file, line_count))
+                        logging.info(f"Processed file: {file}, Lines: {line_count}")
+        except Exception as e:
+            logging.error(f"Error processing files: {e}")
+        
+        return results
+#-----------------------------------------------------------------------------------------------------------------
 # Example usage of functions
 
 def main():
     
-    # 3. Polygon Collision Detection
-    polygon1 = [(0, 0), (4, 0), (4, 4), (0, 4)]
-    polygon2 = [(2, 2), (6, 2), (6, 6), (2, 6)]
-    polygon3 = [(5, 5), (7, 5), (7, 7), (5, 7)]
-    print(check_polygon_collision(polygon1,polygon2))
-    print(check_polygon_collision(polygon1,polygon3))
+    # 4. File Processing
+    source_dir = 'D:/AI_based_control/project'
+    target_dir = 'D:/AI_based_control/Thesis'
+    FileProcessor.copy_directory(source_dir, target_dir)  
+    print(FileProcessor.process_files(target_dir, ['.txt', '.log']))
 
 
 if __name__ == "__main__":
     main()
+#-----------------------------------------------------------------------------------------------------------------
