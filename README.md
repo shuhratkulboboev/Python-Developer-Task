@@ -35,3 +35,11 @@ All actions and significant events (e.g., adding a new key, copying directories,
 ```bash
 tail -f app.log
  ```
+### Project Structure:
+```bash
+/python-data-storage-algorithms
+│
+├── main.py        # Main script with all implemented features
+├── app.log        # Log file for application actions
+└── README.md      # Instructions for running the project
+ ```
