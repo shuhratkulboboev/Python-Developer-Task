@@ -43,3 +43,13 @@ tail -f app.log
 ├── app.log        # Log file for application actions
 └── README.md      # Instructions for running the project
  ```
+## Usage Examples
+### DataStorage Example:
+```bash
+# 1. Data Storage
+    storage = DataStorage()
+    storage.add("name", "Shukhrat")
+    print(storage.get("name"))  
+    storage.delete("name")
+    print(storage.get("name"))
+ ```
