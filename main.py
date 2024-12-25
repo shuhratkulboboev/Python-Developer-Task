@@ -3,8 +3,8 @@ import re
 import logging
 from collections import Counter
 from typing import Tuple,List
-
-
+from shapely.geometry import Polygon
+#-----------------------------------------------------------------------------------------------------------------
 
 # Configuring the logging
 
@@ -14,7 +14,7 @@ logging.basicConfig(
     format = "%(asctime)s ACTION : %(message)s",
     datefmt = "%Y-%m-%d %H:%M:%S"
 )
-
+#-----------------------------------------------------------------------------------------------------------------
 # Datastorage Class
 
 class DataStorage:
@@ -50,7 +50,7 @@ class DataStorage:
     def list(self) -> dict: 
         logging.info(f"Listing all items in the dictionary")
         return self._data
-    
+#-----------------------------------------------------------------------------------------------------------------  
 # Return the top k most frequent words in a text
 
 def find_top_k_frequent_words(text: str, k: int) -> List[Tuple[str, int]]:
@@ -59,14 +59,27 @@ def find_top_k_frequent_words(text: str, k: int) -> List[Tuple[str, int]]:
     top_k_words = words_counting.most_common(k)
     return top_k_words
 
+#-----------------------------------------------------------------------------------------------------------------
+# Checking polygons collision or not
 
+def check_polygon_collision(polygon1: List[Tuple[float, float]], polygon2: List[Tuple[float, float]]) -> bool:
+    poly_1 = Polygon(polygon1)
+    poly_2 = Polygon(polygon2)
+    if poly_1.intersects(poly_2) or poly_1.contains(poly_2) or poly_2.contains(poly_1):
+        return True
+    else: 
+        return False
+#-----------------------------------------------------------------------------------------------------------------
 # Example usage of functions
 
 def main():
     
-    # 2. Algorithm Implementation
-    text = "Hello world! Hello everyone. This is the best company. Company, world,company, hello,world,world"
-    print(find_top_k_frequent_words(text, 2)) 
+    # 3. Polygon Collision Detection
+    polygon1 = [(0, 0), (4, 0), (4, 4), (0, 4)]
+    polygon2 = [(2, 2), (6, 2), (6, 6), (2, 6)]
+    polygon3 = [(5, 5), (7, 5), (7, 7), (5, 7)]
+    print(check_polygon_collision(polygon1,polygon2))
+    print(check_polygon_collision(polygon1,polygon3))
 
 
 if __name__ == "__main__":
