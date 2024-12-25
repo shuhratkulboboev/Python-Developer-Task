@@ -39,9 +39,10 @@ tail -f app.log
 ```bash
 /python-data-storage-algorithms
 │
-├── main.py        # Main script with all implemented features
-├── app.log        # Log file for application actions
-└── README.md      # Instructions for running the project
+├── main.py              # Main script with all implemented features
+├── app.log              # Log file for application actions
+├── README.md            # Instructions for running the project
+└── requirements.txt      # List of dependencies for the project
  ```
 ## Usage Examples
 It is shown as an exmaple of usage these abovementioned functions. Input varialbles can be changed into any.
