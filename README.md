@@ -22,7 +22,6 @@ cd path/to/directory
     - Ensure that Python 3.8 or higher is installed .
     - Install the required package `shapely` using `pip install shapely`.
 
-This makes it clear for users how to set up the environment for your project. Replace `<username>` with your GitHub username in the clone URL.
 ### Run Script: 
 Run the main scirpt:
 ```bash
