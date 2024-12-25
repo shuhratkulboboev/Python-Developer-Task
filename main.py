@@ -1,4 +1,9 @@
+# import needed libraries
+import re
 import logging
+from collections import Counter
+from typing import Tuple,List
+
 
 
 # Configuring the logging
@@ -45,16 +50,23 @@ class DataStorage:
     def list(self) -> dict: 
         logging.info(f"Listing all items in the dictionary")
         return self._data
+    
+# Return the top k most frequent words in a text
+
+def find_top_k_frequent_words(text: str, k: int) -> List[Tuple[str, int]]:
+    words = re.findall(r"\b\w+\b", text.lower())
+    words_counting = Counter(words)
+    top_k_words = words_counting.most_common(k)
+    return top_k_words
+
 
 # Example usage of functions
+
 def main():
     
-    # 1. Data Storage
-    storage = DataStorage()
-    storage.add("name", "Shukhrat")
-    print(storage.get("name"))  
-    storage.delete("name")
-    print(storage.get("name")) 
+    # 2. Algorithm Implementation
+    text = "Hello world! Hello everyone. This is the best company. Company, world,company, hello,world,world"
+    print(find_top_k_frequent_words(text, 2)) 
 
 
 if __name__ == "__main__":
