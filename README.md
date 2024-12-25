@@ -19,8 +19,9 @@ cd path/to/directory
  ```
 
 ### Install Dependencies: 
-    - Ensure that Python 3.8 or higher is installed .
-    - Install the required package `shapely` using `pip install shapely`.
+```bash
+pip install -r requirements.txt
+ ```   
 
 ### Run Script: 
 Run the main scirpt:
