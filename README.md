@@ -27,13 +27,14 @@ Run the main scirpt:
 ```bash
 python main.py
  ```
-
-## Features
-### Logging:
+## Logging
 All actions and significant events (e.g., adding a new key, copying directories, processing files) are logged in the app.log file, including timestamps.
 ```bash
 tail -f app.log
- ```
+```
+
+## Features
+
 ### Project Structure:
 ```bash
 /python-data-storage-algorithms
@@ -43,6 +44,7 @@ tail -f app.log
 └── README.md      # Instructions for running the project
  ```
 ## Usage Examples
+It is shown as an exmaple of usage these abovementioned functions. Input varialbles can be changed into any.
 ```bash
 def main():
     
