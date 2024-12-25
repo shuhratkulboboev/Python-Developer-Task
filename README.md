@@ -20,7 +20,7 @@ cd path/to/directory
 
 ### Install Dependencies: 
 ```bash
-pip install -r requirements.txt # Installs the dependencies listed in requirements.txt, including shapely.
+pip install -r requirements.txt 
  ```   
 
 ### Run Script: 
@@ -31,7 +31,7 @@ python main.py
 ## Logging
 All actions and significant events (e.g., adding a new key, copying directories, processing files) are logged in the app.log file, including timestamps.
 ```bash
-tail -f app.log # Outputs the log contents as they are written
+tail -f app.log 
 ```
 
 ## Features
